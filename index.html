@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#9a3412">
+  <title>台南兩天一夜</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #fffdf5;
+      --note: #fff8c9;
+      --card: #fffef9;
+      --ink: #3f352f;
+      --muted: #655a53;
+      --accent: #b4533c;
+      --blue-line: #cfe3e8;
+      --red-line: #e8aaa3;
+      --hand-font: "BiauKai", "DFKai-SB", "KaiTi", "STKaiti", cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background-color: var(--paper);
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 34px,
+        var(--blue-line) 35px,
+        transparent 36px
+      );
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", sans-serif;
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    header {
+      position: relative;
+      width: min(100% - 28px, 680px);
+      margin: 22px auto 12px;
+      padding: 48px 24px 38px;
+      border: 1px solid #eadf9c;
+      border-radius: 5px;
+      background: var(--note);
+      box-shadow: 5px 7px 0 rgb(92 72 45 / 14%);
+      color: var(--ink);
+      text-align: center;
+      transform: rotate(-0.5deg);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      width: 92px;
+      height: 26px;
+      background: rgb(238 215 169 / 78%);
+      transform: translateX(-50%) rotate(2deg);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--hand-font);
+      font-size: clamp(2.7rem, 12vw, 4rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.08em;
+    }
+
+    header p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-family: var(--hand-font);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    main {
+      width: min(100% - 28px, 680px);
+      margin: 0 auto;
+      padding: 24px 0 52px;
+    }
+
+    section + section {
+      margin-top: 42px;
+    }
+
+    h2 {
+      display: inline;
+      margin: 0;
+      padding: 0 8px 2px;
+      background: linear-gradient(transparent 56%, #ffd98a 56%);
+      color: var(--ink);
+      font-family: var(--hand-font);
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+
+    h2 + .stop {
+      margin-top: 18px;
+    }
+
+    .stop {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 16px;
+      padding: 20px 18px;
+      border: 1px solid #ded4c8;
+      border-left: 5px solid var(--red-line);
+      border-radius: 7px;
+      background: var(--card);
+      box-shadow: 3px 4px 0 rgb(78 59 45 / 9%);
+    }
+
+    .stop + .stop {
+      margin-top: 16px;
+    }
+
+    time {
+      padding-top: 1px;
+      color: var(--accent);
+      font-family: var(--hand-font);
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    h3 {
+      margin: 0 0 5px;
+      color: var(--ink);
+      font-family: var(--hand-font);
+      font-size: 1.45rem;
+      line-height: 1.45;
+    }
+
+    .stop p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .place-photo {
+      grid-column: 1 / -1;
+      margin: 4px 0 0;
+    }
+
+    .place-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid #d8ccbe;
+      border-radius: 7px;
+      object-fit: cover;
+    }
+
+    .place-photo figcaption {
+      margin-top: 6px;
+      color: var(--muted);
+      font-family: var(--hand-font);
+      font-size: .95rem;
+      text-align: center;
+    }
+
+    footer {
+      width: min(100% - 28px, 680px);
+      margin: 0 auto 30px;
+      padding: 14px 18px;
+      border: 1px dashed #c7b9a9;
+      background: rgb(255 253 245 / 90%);
+      color: var(--muted);
+      text-align: center;
+      font-family: var(--hand-font);
+      font-size: 1rem;
+    }
+
+    @media (max-width: 420px) {
+      body {
+        font-size: 18px;
+      }
+
+      header {
+        margin-top: 18px;
+        padding: 42px 18px 32px;
+      }
+
+      main {
+        width: min(100% - 22px, 680px);
+      }
+
+      .stop {
+        grid-template-columns: 72px 1fr;
+        gap: 10px;
+        padding: 18px 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>台南兩天一夜</h1>
+    <p>一起散步、吃小吃，慢慢感受府城日常</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="day-one">
+      <h2 id="day-one">第一天</h2>
+
+      <article class="stop">
+        <time datetime="10:00">10:00</time>
+        <div><h3>台南車站集合</h3><p>會合後先放行李，輕鬆展開兩天的小旅行。</p></div>
+        <figure class="place-photo">
+          <img src="照片/第一天-01.svg" alt="台南車站集合地點照片預留圖" loading="lazy" decoding="async">
+          <figcaption>地點照片（之後可替換）</figcaption>
+        </figure>
+      </article>
+
+      <article class="stop">
+        <time datetime="11:00">11:00</time>
+        <div><h3>府城小吃店</h3><p>用一桌台南經典小吃，替旅程暖身。</p></div>
+        <figure class="place-photo">
+          <img src="照片/第一天-02.svg" alt="府城小吃店地點照片預留圖" loading="lazy" decoding="async">
+          <figcaption>地點照片（之後可替換）</figcaption>
+        </figure>
+      </article>
+
+      <article class="stop">
+        <time datetime="14:00">14:00</time>
+        <div><h3>老街散步區</h3><p>穿梭巷弄與老屋，沿途拍照、逛特色小店。</p></div>
+        <figure class="place-photo">
+          <img src="照片/第一天-03.svg" alt="老街散步區地點照片預留圖" loading="lazy" decoding="async">
+          <figcaption>地點照片（之後可替換）</figcaption>
+        </figure>
+      </article>
+
+      <article class="stop">
+        <time datetime="18:30">18:30</time>
+        <div><h3>人氣晚餐店</h3><p>邊吃晚餐邊分享今天拍到的照片。</p></div>
+        <figure class="place-photo">
+          <img src="照片/第一天-04.svg" alt="人氣晚餐店地點照片預留圖" loading="lazy" decoding="async">
+          <figcaption>地點照片（之後可替換）</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section aria-labelledby="day-two">
+      <h2 id="day-two">第二天</h2>
+
+      <article class="stop">
+        <time datetime="09:00">09:00</time>
+        <div><h3>在地早餐店</h3><p>睡飽後吃一份台南式早餐，補充整天活力。</p></div>
+        <figure class="place-photo">
+          <img src="照片/第二天-01.svg" alt="在地早餐店地點照片預留圖" loading="lazy" decoding="async">
+          <figcaption>地點照片（之後可替換）</figcaption>
+        </figure>
+      </article>
+
+      <article class="stop">
+        <time datetime="10:30">10:30</time>
+        <div><h3>海邊景點</h3><p>吹吹海風、看看風景，享受悠閒的上午。</p></div>
+        <figure class="place-photo">
+          <img src="照片/第二天-02.svg" alt="海邊景點地點照片預留圖" loading="lazy" decoding="async">
+          <figcaption>地點照片（之後可替換）</figcaption>
+        </figure>
+      </article>
+
+      <article class="stop">
+        <time datetime="13:00">13:00</time>
+        <div><h3>特色午餐店</h3><p>品嘗另一道在地料理，再留點胃給甜點。</p></div>
+        <figure class="place-photo">
+          <img src="照片/第二天-03.svg" alt="特色午餐店地點照片預留圖" loading="lazy" decoding="async">
+          <figcaption>地點照片（之後可替換）</figcaption>
+        </figure>
+      </article>
+
+      <article class="stop">
+        <time datetime="15:30">15:30</time>
+        <div><h3>甜點咖啡店</h3><p>喝杯咖啡、整理照片，為旅行畫下句點。</p></div>
+        <figure class="place-photo">
+          <img src="照片/第二天-04.svg" alt="甜點咖啡店地點照片預留圖" loading="lazy" decoding="async">
+          <figcaption>地點照片（之後可替換）</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section aria-labelledby="travel-reminders">
+      <h2 id="travel-reminders">行前提醒</h2>
+
+      <article class="stop">
+        <h3>天氣</h3>
+        <p>示意：白天晴朗，早晚稍涼，出發前再確認預報。</p>
+      </article>
+
+      <article class="stop">
+        <h3>要帶的東西</h3>
+        <p>示意：雨具、防曬用品、行動電源與個人藥品。</p>
+      </article>
+
+      <article class="stop">
+        <h3>集合時間</h3>
+        <p>示意：第一天上午 09:45，請提早十分鐘抵達。</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>店名與時間目前皆為示意，之後可再替換。</footer>
+</body>
+</html>
