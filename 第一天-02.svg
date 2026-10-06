@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">度小月擔仔麵照片預留位置</title>
+  <desc id="desc">之後可以替換成實際地點照片</desc>
+  <rect width="1200" height="675" fill="#f6d7a7"/>
+  <path d="M0 525 270 315l175 130 170-160 335 240 250-185v335H0Z" fill="#9a5b36" opacity=".22"/>
+  <circle cx="910" cy="170" r="78" fill="#fff8dc" opacity=".8"/>
+  <rect x="82" y="72" width="1036" height="531" rx="36" fill="none" stroke="#9a5b36" stroke-width="9" stroke-dasharray="22 18" opacity=".7"/>
+  <text x="600" y="300" text-anchor="middle" fill="#3f352f" font-family="sans-serif" font-size="68" font-weight="700">度小月擔仔麵</text>
+  <text x="600" y="385" text-anchor="middle" fill="#655a53" font-family="sans-serif" font-size="38">地點照片待補</text>
+</svg>
